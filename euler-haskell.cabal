@@ -31,6 +31,7 @@ library
       Problem3
       Problem4
       Problem5
+      Problem6
   other-modules:
       Paths_euler_haskell
   hs-source-dirs:
