@@ -27,6 +27,7 @@ library
   exposed-modules:
       Lib
       Problem1
+      Problem2
   other-modules:
       Paths_euler_haskell
   hs-source-dirs:
