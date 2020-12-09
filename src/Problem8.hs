@@ -1,7 +1,5 @@
 module Problem8
-  ( solve,
-  input,
-  stringProduct
+  ( solve
   ) where
 
 import Lib
