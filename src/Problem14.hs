@@ -9,8 +9,9 @@ import Data.Function
 collatz :: Int -> Int -> Int
 collatz l 1 = l
 collatz l n
-  | n `mod` 2 == 0 = collatz (l + 1) (n `div` 2)
+  | d == 0 = collatz (l + 1) r
   | otherwise = collatz (l + 1) (3 * n + 1)
+  where (r, d) = n `quotRem` 2
 
 solve :: IO ()
 solve = do
