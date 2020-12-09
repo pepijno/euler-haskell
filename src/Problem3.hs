@@ -25,5 +25,6 @@ primeFactors :: Int -> M.Map Int Int
 primeFactors x = (2, n) ?: primeFactors' 3 v
   where (v, n) = factorOut 2 x
 
-solve :: Int
-solve = fst $ fromJust $ M.lookupMax $ primeFactors 600851475143
+solve :: IO ()
+solve = do
+  print $ fst $ fromJust $ M.lookupMax $ primeFactors 600851475143

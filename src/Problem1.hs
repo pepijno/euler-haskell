@@ -4,5 +4,6 @@ module Problem1
 
 import Lib
 
-solve :: Int
-solve = sum . filter (\x -> x `mod` 3 == 0 || x `mod` 5 == 0) $ [1..999]
+solve :: IO ()
+solve = do
+  print . sum . filter (\x -> x `mod` 3 == 0 || x `mod` 5 == 0) $ [1..999]

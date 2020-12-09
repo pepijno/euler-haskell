@@ -4,5 +4,6 @@ module Problem5
 
 import Lib
 
-solve :: Int
-solve = foldl lcm 1 [1..20]
+solve :: IO ()
+solve = do
+  print $ foldl lcm 1 [1..20]

@@ -23,5 +23,6 @@ maxTotal xs = maximum [maxRow xs, maxRow $ transpose xs, maxRow diag1, maxRow di
   where diag1 = filter ((<) 4 . length) $ diagonals xs
         diag2 = filter ((<) 4 . length) $ rotate90 $ diagonals xs
 
-solve :: Int
-solve = maxTotal $ parseInput input
+solve :: IO ()
+solve = do
+  print $ maxTotal $ parseInput input

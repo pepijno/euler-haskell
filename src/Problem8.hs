@@ -12,5 +12,6 @@ input = "73167176531330624919225119674426574742355349194934969835203127745063262
 stringProduct :: String -> Int
 stringProduct = product . map digitToInt
 
-solve :: Int
-solve = maximum . map stringProduct . filter ((==) 13 . length) . concat . map tails $ inits input
+solve :: IO ()
+solve = do
+  print . maximum . map stringProduct . filter ((==) 13 . length) . concat . map tails $ inits input

@@ -35,5 +35,6 @@ triangular x = x * (x + 1) `div` 2
 triangulars :: [Int]
 triangulars = map triangular [1..]
 
-solve :: Int
-solve = triangular . (+) 1 . length . takeWhile (<500) . map numberOfDivisors $ triangulars
+solve :: IO ()
+solve = do
+  print . triangular . (+) 1 . length . takeWhile (<500) . map numberOfDivisors $ triangulars

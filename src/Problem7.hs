@@ -12,5 +12,6 @@ isPrime x = all (\d -> x `mod` d /= 0) $ 2:[3,5..max]
 primes :: [Int]
 primes = 2:[x | x <- [3,5..], isPrime x]
 
-solve :: Int
-solve = primes !! 10000
+solve :: IO ()
+solve = do
+  print $ primes !! 10000
