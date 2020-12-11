@@ -23,6 +23,7 @@ dependencies:
 - containers
 - universe-base
 - exact-combinatorics
+- Decimal
 
 library:
   source-dirs: src
